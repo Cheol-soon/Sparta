@@ -1,9 +1,3 @@
-# Sparta
+# TeamSparta
 
-### readme
-
-###daaaa
-cscscscsc
-
-<hr/>
-ccccc
+This repository is for Team Sparta assignments and projects.
