@@ -46,23 +46,25 @@ print('\n')
 
 # dummy posts data
 posts = []
-user_1_post_1 = Post(title='범죄와의 전쟁', content='2012년작', author=user_1.name)
-user_1_post_2 = Post(title='신세계', content='2013년작', author=user_1.name)
-user_1_post_3 = Post(title='명량', content='2014년작', author=user_1.name)
-user_1_post_4 = Post(title='루시', content='2014년작', author=user_1.name)
+user_1_post_1 = Post(title='범죄와의 전쟁', content='2012년작', author=user_1.username)
+user_1_post_2 = Post(title='신세계', content='2013년작', author=user_1.username)
+user_1_post_3 = Post(title='명량', content='2014년작', author=user_1.username)
+user_1_post_4 = Post(title='루시', content='2014년작', author=user_1.username)
 
 posts.append(user_1_post_1)
 posts.append(user_1_post_2)
 posts.append(user_1_post_3)
 posts.append(user_1_post_4)
 
-user_2_post_1 = Post(title='광해', content='2012년작 일수도', author=user_2.name)
-user_2_post_2 = Post(title='내부자들', content='2015년작 인가?', author=user_2.name)
+user_2_post_1 = Post(title='광해', content='2012년작 일수도', author=user_2.username)
+user_2_post_2 = Post(title='내부자들', content='2015년작 인가?',
+                     author=user_2.username)
 user_2_post_3 = Post(title='터미네이터 제네시스',
-                     content='2015년작 일겁니다.', author=user_2.name)
+                     content='2015년작 일겁니다.', author=user_2.username)
 user_2_post_4 = Post(
-    title='협녀, 칼의 기억', content='2015년작 였었나요?', author=user_2.name)
-user_2_post_5 = Post(title='남산의 부장들', content='2020년작이었지', author=user_2.name)
+    title='협녀, 칼의 기억', content='2015년작 였었나요?', author=user_2.username)
+user_2_post_5 = Post(title='남산의 부장들', content='2020년작이었지',
+                     author=user_2.username)
 
 posts.append(user_2_post_1)
 posts.append(user_2_post_2)
@@ -71,23 +73,25 @@ posts.append(user_2_post_4)
 posts.append(user_2_post_5)
 
 user_3_post_1 = Post(title='공동경비구역 JSA',
-                     content='2000년작 였을수도', author=user_3.name)
+                     content='2000년작 였을수도', author=user_3.username)
 user_3_post_2 = Post(
-    title='봄날은 간다', content='2001년작 였었나요?', author=user_3.name)
+    title='봄날은 간다', content='2001년작 였었나요?', author=user_3.username)
 user_3_post_3 = Post(
-    title='친절한 금자씨', content='2005년작 일겁니다', author=user_3.name)
+    title='친절한 금자씨', content='2005년작 일겁니다', author=user_3.username)
 
 posts.append(user_3_post_1)
 posts.append(user_3_post_2)
 posts.append(user_3_post_3)
 
+# 6-a
 for element in posts:
     if element.author == '이병헌':
         print(element.title)
 print('\n')
 
+# 6-b
 for element in posts:
-    if element.content == '2012년작':
+    if '2012년작' in element.content:
         print(element.title)
 
 while 1:
@@ -122,7 +126,7 @@ while 1:
             author_check = 0
             while not author_check:
                 for element in members:
-                    if element.name == new_post_author:
+                    if element.username == new_post_author:
                         author_check = 1
 
                 if author_check:
@@ -160,6 +164,7 @@ while 1:
             if flag == 0:
                 print('찾으시는 이름의 게시글이 없습니다.')
             print('\n')
+
         case '6':
             flag = 0
             search_word = input('게시글에서 찾으시는 단어 입력하세요 : ')
