@@ -3,9 +3,7 @@ import random
 game = ['가위', '바위', '보']
 restart = 'y'
 reset = 'n'
-win = 0
-lose = 0
-draw = 0
+win, lose, draw = [0, 0, 0]
 
 
 def start_game():

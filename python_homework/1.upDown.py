@@ -18,7 +18,7 @@ while random_num != predic_num and restart == 'y':
 
     try:  # user entered integer, and consverts type str to int
         predic_num = int(predic_num)
-    except :  # user entered something other
+    except:  # user entered something other
         print('자연수를 입력해주세요 (1 ~ 100)')
         print('')
         continue
@@ -33,7 +33,8 @@ while random_num != predic_num and restart == 'y':
         else:  # prediction is correct
             count += 1
             print(f'맞았습니다.\n 시도한 횟수 : {count}')
-            maximum_count = count
+            if maximum_count < count:
+                maximum_count = count
             count = 0
 
             # check regame (y or n)

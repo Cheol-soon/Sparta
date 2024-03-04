@@ -5,10 +5,6 @@ import re
 
 
 class Member():
-    name = ''
-    username = ''
-    password = ''
-
     def __init__(self, name='default_name', username='default_username', password='default_password'):
         self.name = name
         self.username = username
@@ -19,10 +15,6 @@ class Member():
 
 
 class Post():
-    title = ''
-    content = ''
-    author = ''
-
     def __init__(self, title='', content='', author=''):
         self.title = title
         self.content = content
