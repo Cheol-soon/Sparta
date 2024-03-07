@@ -1,4 +1,5 @@
-t = int(input())
+T = int(input())
+# 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
 
 
 def dfs(i, taste, kcal):
@@ -13,15 +14,14 @@ def dfs(i, taste, kcal):
     dfs(i+1, taste, kcal)  # 현재 재료 미선택
 
 
-for ind in range(t):
+for test_case in range(1, T + 1):
     N, L = map(int, input().split())
     s = []
     k = []
-
     for _ in range(N):
         score, kcal = map(int, input().split())
         s.append(score)
         k.append(kcal)
     max_taste = 0
     dfs(0, 0, 0)
-    print(f'#{ind+1} {max_taste}')
+    print(f'#{test_case} {max_taste}')
